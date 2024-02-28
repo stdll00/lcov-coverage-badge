@@ -41,9 +41,12 @@ on:
 #### Add a step to read the coverage file
 ```yaml
 ...
-steps:
-  - uses: GoogleCloudPlatform/github-badge-lcov@v1.0.0
-    file: ./target/coverage.dat
+jobs:
+  ...:
+    steps:
+      - uses: GoogleCloudPlatform/lcov-coverage-badge@v1.0.0
+        with:
+          file: coverage.dat
 ```
 
 ### Add the badge
